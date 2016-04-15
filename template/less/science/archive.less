@@ -1,0 +1,201 @@
+// main: ../science.less
+
+.science-wrap {
+    padding: 5% 0;
+    .bgcf;
+    z-index: 5;
+}
+
+.science-post_margin {
+    
+    border: 4px solid #16a085;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4em;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    &:hover {
+      border: 4px solid #e74c3c;  
+    }
+    
+    .shadow {
+     .shadow(#313131, 0.8)   
+    }
+}
+
+.science-post {
+    padding: 2em;
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+    
+    &_dates {
+        font-size: 0.8em;
+        color: #7f8c8d;
+        span {
+            display: inline-block;
+            padding: 0.5em;
+            border: 1px solid #16a085;
+        }
+    }
+    
+    &_excerpt {
+       margin: 1em 0;
+       font-size: 1.2em;
+        color: #7f8c8d;
+        span {
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: 'PT Serif', serif;
+            font-style: italic;
+            color: #000;
+        }
+        
+    } 
+    
+    &_authors {
+        font-size: 0.8em;
+        .position {
+           font-size: 0.9em;
+           color: #7f8c8d;
+        }
+        a {
+            display: inline-block;
+            position: relative;
+            z-index: 4;
+        }
+    } 
+    
+    &_link {
+        display: block;
+        .absolute;
+        z-index: 3;
+            
+    }
+}
+
+@arh:20px;
+@arbd:5px;
+@radi:60px;
+@radimin:10px;
+
+.science-post_type {
+//   position: relative;
+//    padding: 2em 0;
+    
+    position: absolute;
+    bottom: 0;left: 0;top: 0;
+    width: 20%;
+//    border: 1px solid #f00;
+    
+    .vertical;
+    
+    span {
+        display: block;
+        text-align: center;    
+        position: relative;
+        z-index: 3;
+        font-size: 2em;
+        color: #fff;
+      margin: @arh auto;  
+    }
+}
+a.science-video-l {
+  display: block;
+    
+  width: 0; height: 0;
+    
+  border-top: @arh solid transparent;
+  border-bottom: @arh solid transparent;
+  border-left: 10+@arh solid @white;
+  margin: @arh auto;
+    
+  position: relative;
+  z-index: 4;
+    
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  
+ left: @arbd; 
+ cursor: pointer;
+
+   &:after {
+      content: '';
+      opacity: 0;
+      position: relative;
+      transition: opacity 0.6s;
+      -webkit-transition: opacity 0.6s;
+      -moz-transition: opacity 0.6s;
+    }
+    
+   &:before {
+      content: '';
+      position: absolute;
+       
+    top: -@radi/2;
+       bottom: -@radi/2;
+       
+    left: -@radi+@radimin;
+       right: -@radimin;
+    
+    
+       
+      border-radius: 50%;
+      border: @arbd solid  @white;
+      z-index: 2;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+    }
+    
+    &:hover:before, .play:focus:before {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+    }
+   }
+
+
+.science-editors {
+    border: 2px solid #1abc9c;
+    padding: 2em;
+    margin: 10% 0;
+    
+    ul {
+        li {
+            display: block;
+            padding: 0.3em 0;
+            font-size: 1.2em;
+        }
+    }
+    
+    .science-subscribe {
+        
+        width: 40%;
+        
+        input {
+            box-sizing: border-box;
+            display: block;
+            padding: 1em;
+            border: 1px solid #3498db;
+            float: left;
+            &:focus {
+                outline: 0;
+            }  
+          &[type=email] {
+            border-right: 0;
+            width: 70%;} 
+          &[type="submit"] {
+            /*border-left: 0;*/
+            width: 30%;
+            color: #fff;
+              background-color: #2980b9;
+            }  
+        }
+
+    } 
+}

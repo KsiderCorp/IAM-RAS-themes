@@ -1,0 +1,199 @@
+// main: ../style.less
+
+
+.edu {
+    &-header {
+       padding-top: 10%;
+       padding-bottom: 5%;
+        
+        span {
+          font-size: 4em;
+          display: inline-block;
+            /*          
+          background-color: #2b85c1;  
+          color: #fff;
+          padding: 0.1em;  
+            */
+          line-height: 100%;
+            font-weight: bold;
+           
+        }
+        
+        .edunav {
+            display: inline-block;
+            margin: 0;padding: 0;
+            padding-left: 2em;
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    margin-right: 1em;
+                    text-decoration: none;
+                    border-bottom: 1px dashed #3498db;
+                }
+            }
+        } 
+        
+    }  
+    
+    &-nec {
+       padding: 5% 0;
+      .bgc; 
+
+       &-header {
+        span {
+          font-size: 2em;
+          display: inline-block;
+          background-color: #27ae60; 
+          padding: 0.3em;
+            margin-bottom: 0.1em;
+          color: #fff;
+          line-height: 100%;
+            &.base {
+                font-size: 1.2em;
+            }
+           }
+            }
+        
+        &-content {
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #16a085;
+            padding: 2em;
+            
+            a {
+                color: #f1c40f;
+            }
+        }
+        
+       &_contacts {
+            
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 1em;
+            margin-top: 2em;
+           margin-right: 1em;
+            .chair-boss {
+                &_nameblock {
+                    padding-right: 1em;
+                }              
+                &_zav {
+                font-size: 0.8em;    
+                }
+                &_name {
+                font-size: 1.2em; 
+                padding: 0.7em 0;
+                    a {color: #fff;}
+                }                
+                &_rank {
+                  font-size: 0.8em;  
+                }               
+                
+                &_img {
+                .bgc;
+                padding-bottom: 100%;
+                }
+                
+            } 
+         
+        }
+    }   
+    
+    &-chair {
+     padding: 5% 0;
+      position: relative;
+        background-color: #313131;
+        a {
+            color: #f1c40f;
+        }
+        
+        &-content {
+            width: 60%;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            font-size: 1.2em;
+            p {
+                line-height: 150%;
+            }
+        }
+        
+  
+
+    }  
+    
+    &-postdoc {
+        
+        padding: 5% 0;
+        
+        &_header {
+         
+        span {
+        display: inline-block;
+        line-height: 100%;
+            font-size: 2em;
+         font-weight: bold;   
+            }  
+        }
+        
+        &_formula {
+             padding-left: 2em;
+            
+            .edu-postdoc_call {
+                font-size: 1.8em;
+                .edu-code {
+                  font-size: 0.5em;
+                    padding-top: 1em;
+                    a {
+                        
+                        color: #95a5a6;
+                        text-decoration: none;
+                        border-bottom: 1px dashed #95a5a6;
+                    }
+                }
+            } 
+
+            p {
+                padding-bottom: 3em;
+                font-size: 1.2em;
+            }
+ 
+        } 
+        
+        .postdoc-boss {
+            padding:  0;
+            width: 80%;
+            margin: 10% 0;
+            padding-left: 10%;
+            
+            border-left: 1em solid #3498db;
+            &_name {
+                font-size: 1.3em;
+                
+                a {
+                   
+                }
+                
+                span {
+                    font-size: 0.7em;
+                    color: #7f8c8d;
+                    line-height: 100%;
+                    display: block;
+                    padding: 1em 0;
+                }
+            }
+            
+            &_cont {
+                font-size: 0.8em;
+                padding: 1em 0;
+                font-family: @heading;
+                span {
+                   font-family: @sans; 
+                   font-weight: bold;
+                   margin-right: 0.2em;
+                }
+            }            
+ 
+        }  
+    }
+}

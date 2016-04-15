@@ -1,0 +1,126 @@
+// main: ../continuum.less
+
+@white: #f1f1f1;
+@black: #313131;
+@ycolor: #e67e22;
+
+.vertical {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center ;
+    -webkit-align-items: center ;
+    -ms-flex-align: center ;
+    align-items: center ;
+}
+.bottom {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-align: end;-webkit-align-items: flex-end;-ms-flex-align: end;-ms-grid-row-align: flex-end;align-items: flex-end;
+}
+
+.flexcenter {
+     -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+}
+.absolute {
+    position: absolute;
+    top: 0;right: 0;left: 0;bottom: 0;
+}
+
+.bgcf {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+ 
+}
+.bgc {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+ 
+}
+
+.pattern {
+    background-image: url('../../img/bc/pattern-dark.svg');
+    background-repeat: repeat;
+    background-size: 20px;
+}
+
+.animate {
+     -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.upper(@fsize) {
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: @fsize;
+
+}
+.borderdraw {
+    box-shadow: inset 1000px 0 0 0 #f39c12;
+}
+
+.shadow(@col, @op) {
+    position: absolute;
+    display: block;
+    top: 0;bottom: 0;left: 0;right: 0;
+    z-index: 2;
+    background-color: @col;
+    opacity:@op ;
+}
+
+.vert(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+    background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+
+    background-image: -o-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Opera 12
+    background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+  }
+
+
+.pretty-buttons(@color, @background, @text-shadow: none) {
+	
+	color: @color;
+	.vert(lighten(@background, 5%), darken(@background, 5%), 0%, 100%);
+	border-color: darken(@background, 10%);
+	border-bottom-color: darken(@background, 20%);
+	text-shadow: @text-shadow;
+	.box-shadow(inset 0 1px 0 rgba(255, 255, 255, .1));
+	
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		.vert(darken(@background, 0), darken(@background, 10%), 0%, 100%);
+		border-color: darken(@background, 20%);
+		color: @color;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: darken(@background, 5%);
+		}
+	}
+}

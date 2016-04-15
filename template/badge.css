@@ -1,0 +1,260 @@
+#navig {
+    display: none;
+}
+
+#navig.gettop,
+		#navig.gettop #searchform,
+		#navig.gettop #searchform input[type=search] {
+			background: transparent;
+			color: #fff;
+		}
+		
+#navig.gettop a {
+			color: #fff;
+		}
+#navig #searchform input[type=search] {border: 1px solid #fff;}
+#searchform input[type=submit] {
+    color: #fff;
+}
+
+.report_map {
+	padding-top: 0.5em;
+	color: #fff;
+	font-size: 0.3em;
+    cursor: pointer;
+	border-radius: 50%;
+    }
+
+#modal_id {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0; left: 0;bottom: 0;
+    
+    
+    background: #fff url(../img/_etazh_1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;  
+}
+
+
+.report_page {
+    min-height: 100%;
+    position: relative;
+}
+.report_side {
+    position: fixed;
+    top: 0;left: 0;bottom: 0;
+    width: 20%;
+/*    border-right: 2px solid #fff;*/
+}
+.report_content {
+    position: relative;
+    margin-left: 20%;
+    padding-bottom: 10%;
+}
+
+
+.report_menu,
+.report_menu .spied ul,
+.report_menu .spied {
+    margin: 0;padding: 0;
+    height: 100%;
+}
+
+.report_logo {
+    position: relative;
+    height: 20%;
+
+	background: url(../img/bc/280323b9be9979e63bb418f93ad69f33.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+}
+
+.shad {
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;bottom: 0;
+    left: 0;right: 0;
+    z-index: 2;
+}
+
+.report_logo img{
+    position: relative;
+    height: 100%; width: 100%;
+     z-index: 20;
+}
+
+.report_menu .spied ul li {
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    height: 11.43%;
+	line-height: 100%;
+	overflow: hidden;
+   -webkit-box-shadow:0 0 0 1px #fff;
+    box-shadow:0 0 0 1px #fff;
+}
+.report_menu .spied ul li a {
+    display: block;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0 10%;
+    top: 0;bottom: 0;
+    left: 0;right: 0;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+}
+.report_menu .spied ul li a:hover,
+.report_menu .spied ul li.active a{
+    background-color: #c0392b;
+    }
+
+.report_text-block > p
+{
+	padding: 0 5%;	
+	}
+
+.report_titel {
+   font-size: 3em;
+    padding: 5% 0;
+    padding-left: 1em;
+    background-color: #313131;
+    color: #fff;
+    }
+
+
+.sect-block {
+    padding: 5% 0;
+    border-bottom: 1px solid #ddd;
+}
+.mem-posters-list {
+    border: 1px solid #ddd;
+}
+
+.memb-list-time {
+background-color: #f3f3f3;;
+color: #000;}
+
+.memb-list-time.yellow {
+	border-left: 1em solid #e67e22;
+}
+
+.memb-list-time.con_zal  {
+	border-left: 1em solid #16a085;
+}
+
+.memb-list-time.green {
+	border-left: 1em solid #ff0;
+}
+
+.memb-list-time.purple {
+	border-left: 1em solid #8e44ad;
+}
+
+.memb-list-time.red {
+	border-left: 1em solid #e74c3c;
+}
+
+.memb-list-time.noncolor {
+	border-left: 1em solid #ff0;
+}
+
+a.report_anchor {
+	padding-left: 1em;
+	font-size: 0.8em;
+	color: #ddd;
+	text-decoration: none;
+}
+
+.report_mobile {
+    display: none;
+}
+
+
+.coffeebreak {
+  padding: 1.2em 0;
+    font-size: 1.2em;
+    
+}
+
+
+@media (max-width: 1200px) {
+
+.report_side {
+    width: 30%;
+    background: #fff;
+}  
+.report_content {
+        margin-left: 30%;}
+
+.memb-list-time {
+    padding: 1em;
+    font-size: 1em;}
+    
+}
+
+@media (max-width: 1024px) {
+
+.report_side {
+    width: 30%;
+    background: #fff;
+}  
+.report_menu .spied ul li a {
+	font-size: 0.8em;
+	}
+.report_content {
+        margin-left: 30%;
+    }
+
+.memb-list-time {
+    padding: 1em;
+    font-size: 1em;
+}
+    
+}
+
+@media (max-width: 768px) {
+	.report_titel {
+		font-size: 2em;
+	}
+    .report_side {
+        display: none;
+		width: 50%;
+		z-index: 999;
+		background-color: #fff;
+    } 
+	.report_content {
+		margin: 0;
+	}
+	
+	
+.report_text-block {
+        margin-left: 2em;
+    }
+.report_titel {
+        font-size: 2.2em;
+    }
+.report_text-block p {
+		
+	}
+	.mem-sect {
+	padding: 0;
+		font-size: 1.4em;
+	}
+	.mem-speech-list,
+	.mem-manager, 
+	ul.mem-posters-list {
+		padding: 0.2em;
+		margin-left: 0;
+	}
+	
+}
+

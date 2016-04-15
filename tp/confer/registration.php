@@ -1,0 +1,2 @@
+<?php //  echo do_shortcode( '[contact-form-7 id="222" title="conference" html_id="ToSend" html_class="conference-form conf-reg"]' ); ?>
+<?php echo do_shortcode( '[contact-form-7 id="985" title="cinference" html_id="ToSend" html_class="conference-form conf-reg"]' ); ?>

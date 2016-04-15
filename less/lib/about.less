@@ -1,0 +1,246 @@
+// main: ../style.less
+
+/* History 	background: @histvgcolor;*/
+
+@histvgcolor: #95a5a6;
+@histstroke: #7f8c8d;
+
+.history-header {
+    position: relative;
+    background-color: @histvgcolor;
+    & > .block {
+        position: relative;
+        z-index: 2;
+    }
+   
+    &_wrap {
+    padding: 10% 0;
+        
+    }
+    
+    &_named {
+       color: #fff; 
+        position: relative;
+    }  
+    &_fgbun {
+        padding-bottom: 2em; 
+    }
+    &_iam {
+          padding-bottom: 2em;
+           span {
+           display: block;
+           font-size: 4 * @scale * 1rem;
+           letter-spacing: 0.1em;
+           line-height: 90%;
+           font-family: @heading;  
+           .max(760px, {
+               font-size: 2 * @scale * 1rem;
+               text-align: center;
+                }); }
+    }
+    &_ras {
+     font-size: 1.5 * @scale * 1rem; 
+     padding-bottom: 2% ;   
+     }
+    
+    
+    &_partners {
+     position: relative;
+        
+        padding-top: 5%;
+        
+        &:hover .partners_link {
+            opacity: 0.5;
+        }
+        
+        .partners_link {
+            display: inline;
+            float: left;
+            position: relative;
+            width: 8%;  padding-bottom: 8%;
+            text-indent: -9999px;
+            line-height: 0;
+            .animation;
+            &:hover {
+                opacity: 1;
+            }
+        }  
+         a {
+             
+        position: absolute;
+        left: 1em; bottom: 1em;
+        top: 1em;  right: 1em;
+        
+        background-size: contain;
+             
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+         
+             &.ras {background-image:url("@{logotypes}/ras.svg");}
+             &.msu {background-image:url("@{logotypes}/msu.jpg");}
+             &.mipt {background-image:url("@{logotypes}/mipt.svg");}
+             &.tsagy {background-image:url("@{logotypes}/tsagy.png");}
+             &.niishp {background-image:url("@{logotypes}/niishp.jpg");}
+             &.rudn {background-image:url("@{logotypes}/rudn.svg");}
+             &.mai {background-image:url("@{logotypes}/mai.svg");}
+             &.amur {background-image:url("@{logotypes}/amur.jpg");}
+             &.mitht {background-image:url("@{logotypes}/mitht.png");}
+             &.ciam {background-image:url("@{logotypes}/ciam.jpg");}
+             &.fano {background-image:url("@{logotypes}/fano.png");}
+             &.rnf {background-image:url("@{logotypes}/rcf.svg");}
+             &.rfbr {background-image:url("@{logotypes}/rfbr.png");}
+             &.ipmeh {background-image:url("@{logotypes}/ipmeh.svg");}
+
+             
+         }      
+        
+    }
+}
+
+#chart {
+  overflow: hidden;
+  position: absolute;
+  left: 0; bottom: 0;
+  top: 0;  right: 0;
+  border: 0;
+  text-align: center;
+    z-index: 1;
+    
+svg {
+position: absolute;
+  left: 0; bottom: 0;
+  top: 0;  right: 0;
+  z-index: 1;
+  path {
+    
+    &:first-child {
+       fill: #e67e22;}  
+    stroke: @histstroke;
+    stroke-width:1px;
+	  fill: @histvgcolor;
+    &:hover {
+      fill: #e67e22;
+    }
+      
+}
+  circle {
+    fill: rgba(10,100,200,0);
+  }
+}  
+    
+  span {
+    position: relative;
+    
+    z-index: 2;
+    color: #fff;
+    font-size: 2em;
+  }
+}
+.envelope {
+    position:relative;
+	border:4px solid @histstroke;
+	padding:2em;
+	box-shadow:0px 4px 14px 0px @histstroke;
+    background-color: @histstroke;
+    color: #fff;
+    
+    a {color: #fff;}
+    
+    .border-top { 
+	position:absolute;
+	top:0; right:0; left:0;
+	padding:0.5em;
+
+background: -webkit-repeating-linear-gradient(45deg, @histstroke, @histstroke 20px, #fff 20px, #fff 30px, #e74c3c 30px, #e74c3c 50px, #fff 50px, #fff 60px);background: repeating-linear-gradient(45deg, @histstroke, @histstroke 20px, #fff 20px, #fff 30px, #e74c3c 30px, #e74c3c 50px, #fff 50px, #fff 60px);}
+   
+    .hylogo {
+	background: url(img/bc/ps.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width:80%; 
+	padding-bottom:80%; 
+	margin:0 auto;}
+    
+    ul {
+        li {
+            display: block;
+            padding-bottom: 0.3em;
+            position: relative;
+            i {
+                margin-left: -1.1em;
+            }
+        }
+    }
+    
+}
+
+
+.history-content {
+    padding: 10% 0;
+    background-color: #2980b9;
+    color: #fff;
+    &_direction {
+        padding: 2em;
+        background-color: #313131;
+        
+       }   
+    &_description {
+       font-size: 1.5em; 
+        padding-right: 1em;
+        
+    }
+    
+    .history-content_fastlinl{
+        padding-top: 2em;
+        a {
+          text-align: center;
+          color: #313131;
+          display: inline-block;
+          background-color: #fff;
+            text-decoration: none;
+            .upper(1em);
+          padding: 1em;
+            margin-right: 1em;
+            &:hover {
+                background-color: #e74c3c;
+                color: #fff;
+            }
+          
+        }
+    }
+    
+}
+
+
+
+.history-history {
+    
+.history {
+	padding:10% 0;
+	background: #2c3e50 url(img/bc/86858683373348de6a0f6de258f07a9a.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 30% 50%;
+    
+    font-size: 1.1em;
+    }
+.htext {
+	position:relative;
+	padding:4em; 
+	background:rgba(0,0,0,0.5);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+	color:#fff;
+        a {color:#2ecc71;}
+    }
+
+    
+}
+
+.history-history_foto {
+    background-color: #313131;
+    padding: 10% 0;
+}

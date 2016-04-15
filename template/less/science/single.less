@@ -1,0 +1,320 @@
+// main: ../science.less
+
+/* Science single */
+
+.science-singl_wrap {
+    .bgcf;
+	color: @white;
+}
+
+#navig.gettop,
+#navig.gettop #searchform,
+#navig.gettop #searchform input[type=search]
+		{background:transparent; color:#fff;} 
+#navig.gettop a { color:#fff;}	
+.logoblock a.logo {
+  border-left: 4px solid #fff;
+}
+
+.sc_single {
+    
+    &-head {
+      position: relative;
+        .bgcf;
+
+            &:after {
+                content: ' ';
+                .shadow(#313131, 0.5);
+            }
+            .shadows {
+              .shadow(#313131, 0.1);   
+            }
+
+            & > div {
+               position: relative;
+               z-index: 3; 
+            }  
+     iframe {
+         display: block;
+         position: relative;
+         margin: 0 auto;
+         z-index: 3;
+            } 
+    }
+    
+    &-video{
+        height: 62%;} 
+    &-txt {
+        height: 50%;}
+    
+    
+    &-title{
+      
+&.hasvideo,
+&.novideo{
+      position: absolute;
+      bottom: 0; left: 0; right: 0;} 
+        
+      width: 60%; margin: 0 auto;
+        
+&.novideo {text-align: center;}    
+        &.hasvideo {
+            .sc_single-name {
+                padding-left: 1em;
+            }     
+        }
+    }   
+    &-name {
+      .upper(1.6em);
+      color: @white;
+        a {
+            text-decoration: none;
+            color: @white;
+            &.hprew {
+                display: block;
+                font-size: 0.7em;
+                padding-bottom: 1em;
+                text-transform:lowercase;
+                color: @ycolor;
+            }
+        }
+    }   
+
+    &-authors {
+      font-size: 0.7em;
+      color: @white;
+      padding: 1em;
+       margin-left: -1em; 
+       font-family: 'PT Serif', serif;
+       letter-spacing: normal;
+       text-transform: none;
+        span {
+            font-style: italic;
+        }
+        i {
+            font-size: 0.8em;
+            color: #ecf0f1;
+        }
+        a {
+            text-decoration: none;
+            color: @white;
+          }
+    }    
+ 
+    &-videoblock{
+     width: 100%; margin: 0 auto; 
+     padding: 2em 0;
+        .max(769px, { width: 100%; });   
+        
+         .video-block {
+            color: @white;
+            z-index: 2;
+            font-size: 3em;
+            position: relative;
+            height: 100%;
+
+
+a {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 60px solid @white;
+  margin: -50px auto 50px auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  left: 10px; cursor: pointer;
+  &:before {
+      content: '';
+      position: absolute;
+      top: -75px;
+      left: -115px;
+      bottom: -75px;
+      right: -35px;
+      border-radius: 50%;
+      border: 10px solid  @white;
+      z-index: 2;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+    }
+   &:after {
+      content: '';
+      opacity: 0;
+      transition: opacity 0.6s;
+      -webkit-transition: opacity 0.6s;
+      -moz-transition: opacity 0.6s;
+    }         
+    &:hover:before, .play:focus:before {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+    }
+             }
+
+
+
+           
+
+
+        }  
+    }  
+    
+    
+    &-scroll{
+     height: 5%;
+        
+        .vertical;
+        .flexcenter;
+        width: 100%;
+         a.sc_scroll {
+            text-decoration: none;
+            display: inline-block;
+            color: @white;
+            .upper(1em);
+            position: relative;
+            z-index: 6;
+        }
+    }
+    
+    &-footer{
+        padding: 1em 0;
+        color: @black;
+        background-color: #ecf0f1;
+        & > div {
+            width: 100%;
+        }
+    }
+  
+}
+
+.scs {
+    a {
+        display: inline-block;
+        padding: 0.5em 1em;
+        border: 1px solid @black;
+        color:  @black;
+        margin-left: 1em;
+        text-decoration: none;
+        &:hover {
+          border: 1px solid @ycolor;  
+        }
+    }
+}
+.science-date {
+   padding: 0.5em 1em; 
+    padding-left: 0;
+}
+
+
+  
+
+.sc_single-content {
+    padding-top:5%;
+   
+    .sc_single-block {
+      font-size: 1.1em;
+      padding-bottom: 5%; 
+    }
+    .sc_single-exerpt {
+        font-size: 1.8em;
+        padding-bottom: 2%;
+        font-family: 'PT Serif', serif;
+    }
+    
+    form {
+        display: block;
+        padding: 1em;
+        font-size: 1rem;
+        
+        input {
+        box-sizing: border-box;
+        width: 100%;
+        outline: 0;
+        &[type=email] {
+                padding: 1em;
+                border: 1px solid #ddd;
+                display: block;
+            font-size: 1.5em;
+            &:focus{
+                border: 1px solid @ycolor;
+            }
+            }            
+         &[type=submit] {
+                padding: 0.5em;
+                border: 1px solid #ddd;
+                display: block;
+            }
+        }
+    }
+ 
+}
+
+.sc_single-related {
+    position: relative;
+    
+    .sc_single-header {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        color: #000;
+        font-size: 2em; background-color: #fff;
+        display: none;
+    }
+    
+    & > .rblock {
+        margin-left: 5%;
+       border: 2px dashed #95a5a6;
+    }
+
+}
+
+.sc-related-{
+    
+    &block {
+       display: block;
+       padding: 2em;
+        margin: 1em;
+        text-decoration: none;
+         border: 2px solid transparent; 
+        &:hover {
+          border: 2px solid #bdc3c7;  
+        }
+    }
+            
+    &pic {
+      padding-bottom: 60%;
+      .bgc;
+    }
+
+    &title {
+        .sc-related-authors {
+           font-weight: bold;
+            padding: 0.5em 0;
+            font-size: 1.1em;
+            
+            .position {
+                font-weight: lighter;
+                font-size: 0.8em;
+            }
+        } 
+        .sc-related-names{
+           font-size: 0.9em; 
+        }
+    }
+ 
+        }  
+
+
+.science-single_comment {
+            position: relative;
+            padding: 5%;
+            z-index: 5;
+        }
+
+

@@ -1,0 +1,241 @@
+// main: ../science.less
+
+
+#navig.gettop {
+    #searchform {
+    background: transparent;
+    color: @ycolor; 
+        input[type=search] {
+            background: transparent;
+            color: @black; 
+        } 
+        input[type=search] {border: 1px solid @ycolor;}
+        input[type=submit] {color: @black;}
+    }
+    
+    a {
+      color: @black;
+    }
+    .logoblock {
+        a {
+          border-left: 4px solid @ycolor;  
+        }
+        a.logo-science {
+          border: 0;  
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 0.2em ;
+            color: #313131;
+            box-shadow: 0 0 0 0.4em #fff;
+        }
+        
+    }
+}
+
+/* header */
+
+.science-head_block {
+    
+    position: relative;
+    z-index: 5;
+    padding: 0 1em;
+    padding-bottom: 5%;
+    &.first {
+        padding-top: 10%;
+        
+        position: relative;
+        .head_block_footer {position: relative;}
+
+      .science-logo {
+         width: 70%;
+         margin-right: 30%;
+         position: relative;
+         padding-bottom: 1em;
+          
+          span {
+              display: block;
+              color: @white;
+              .upper(3em);
+              
+              &:nth-child(2) {
+                  font-weight: bold;
+              }
+              
+.max(1024px, {.upper(2.8em); });                
+.max(768px, {.upper(1.3em); });    
+.max(568px, {.upper(1.3em); });    
+  
+          
+          }
+         }
+        .science_navigation {
+        position: absolute;
+        bottom: 0;left: 70%;right: 0;
+
+            ul {
+                text-align: right;
+                li:nth-last-child(1){
+                    padding-right: 0;
+                }
+            }
+       .max(568px, {
+            position: static;
+            display: block;
+            ul {
+             text-align: left;   
+            }
+         });  
+        }
+      } 
+    
+    .science-logo {
+        &.paged {
+            .upper(2em);
+            color: @white;
+            text-align: center;
+            padding-top: 7%;
+            a {
+                color: @white;
+                text-decoration: none;
+            }
+        }
+        
+    } 
+    
+    .description {
+        width: 50%;
+        margin: 0 auto;
+        color: @white;
+        text-align: center;
+    }
+ 
+.signature {
+            padding-top: 200px;
+            background-image: url('../../img/logo/npp.svg'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position:  center center;
+    }
+}
+
+.science_navigation {
+    position: relative;
+    z-index: 3;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    ul {
+        width: 100%;
+        text-align: center;
+        margin: 0;padding: 1em 0;
+ li {
+       display: inline-block; 
+       padding: 0 1em;
+      .max(769px, {padding: 0;});     
+      .max(1025px, {
+          padding: 0; 
+          padding-bottom: 1em;
+          padding-right: 1em;
+          display: inline-block;});     
+   
+            a {
+                color: @black;
+                text-decoration: none;
+                display: inline-block;
+                border-bottom: 2px solid @black;
+                &:hover {
+                border-bottom: 2px solid @ycolor;    
+                }
+            }
+            
+            &.current-menu-item a {
+                color: @ycolor;
+              border-bottom: 2px solid transparent;  
+            }  
+        }
+    }
+}
+ 
+.gutter(@awidth) {
+   width: 25 - 2*@awidth; 
+  //  margin: @awidth ;
+    
+}
+
+.science_navigation-paged {
+    margin-bottom: 5%;
+    ul {
+        margin: 0;
+        padding: 0;
+
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        
+        align-content: stretch;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        li {
+            display: block;
+            position: relative;
+
+            margin-top: -2px;
+            margin-right: -2px;
+            
+            width: 25%;
+            height: 100px;
+            
+            &.rss {
+                display: inline-block;
+            }
+            
+             border: 2px solid #16a085;
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            a {
+                font-size: 1.3em;
+                text-align: center;
+                display: block;
+                color: #313131;
+                .absolute;.flexcenter;
+                .vertical;
+                text-decoration: none;
+              // background-color: rgba(255, 255, 255,0.5);
+            &:hover {
+                //color: #fff;
+                background-color: #f1c40f;}
+            }
+        }
+    }
+}
+
+.science-ribbon {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    width: 100px;
+    padding-top: 0px;
+    box-shadow:  0 3px 6px #666;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+    border-radius:0 0 1em 1em ;
+    background-color: #3498db;
+            background-image: url(../../img/logo/npp-min.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+    .animate;
+    a {
+        .absolute;
+    }
+}
+

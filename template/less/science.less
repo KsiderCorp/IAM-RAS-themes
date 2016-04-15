@@ -1,0 +1,68 @@
+// out: ../css/science.css, compress:true, autoprefixer:true
+
+// @import (inline)  "https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Caption:400,700|Bad+Script&subset=latin,cyrillic";
+
+@import "media.less";
+@import "science/help.less";
+
+@import "science/header.less";
+@import "science/archive.less";
+@import "science/single.less";
+@import "science/taxonomy.less";
+
+
+
+/* Pagination */
+.science-pagination {
+    position: relative;
+    z-index: 7;
+    text-align: center;
+    .nav-links {
+        display: inline-block;
+        margin: 0 auto;
+        color: @white;
+        font-size: 0;
+    }
+    
+    a.page-numbers {
+        display: inline-block;
+        padding: 0.5em 1em;
+        margin: 0;
+        text-decoration: none;
+        color: @white;
+        background-color: #95a5a6;
+        font-weight: bold;
+        border-bottom: 2px solid transparent;
+        font-size: 1rem;  
+        &:hover {
+            border-bottom: 2px solid #ddd;
+            background-color: #bdc3c7;
+        }
+    }
+    .current {
+        display: inline-block;
+        padding: 0.5em 1em;
+        border-bottom: 2px solid #e74c3c;
+        color: @white;
+        background-color: #e74c3c;
+        font-size: 1rem;
+    }
+    
+}
+
+
+.science_rss {
+    text-align: center;
+    a{
+        position: relative;
+        z-index: 3;
+        font-size: 2.3em;
+        text-decoration: none;
+        color: #f26522;
+    }
+}
+
+
+
+
+

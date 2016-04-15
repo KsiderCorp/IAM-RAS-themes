@@ -1,0 +1,81 @@
+// main: ../science.less
+
+/* Tax archive */
+
+.curent_term {
+    position: relative;
+    z-index: 3;
+    color: @white;
+    margin: 2em 0 1em;
+    & + .curent_term_description {
+        font-size: 0.9em;
+        color: @white;
+    }
+    }
+.science-wrap {
+    &.taxonomy {
+      position: relative;
+        z-index: 1;
+     .shadow {
+        .absolute;
+        z-index: 2;
+        background-color: #313131;
+        opacity: 0.5;
+        }
+    }
+}
+
+.science-term_archive {
+    z-index: 3;
+    position: relative;
+    border: 0;
+    border-top: 2px solid @white;
+    border-bottom: 2px solid @white;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: @white;
+    
+    &.future:before {
+        .absolute;
+        content: ' ';
+        z-index: 9;
+        background-color: #fff;
+        opacity: 0.5;
+    }
+}
+
+.science-term_date {
+    position: absolute;
+    bottom: 0;right: 80%;left: 0;top: 0;
+     .vertical;
+
+    .futures_date {
+        position: relative;
+        width: 100%;
+        font-size: 1.4em;
+        color: @black; 
+        text-align: center;
+    }
+}
+
+.science-term_exerpt {
+    position: relative;
+    margin-left: 20%;
+    
+    
+    .science-term_title {
+        a {
+            font-size: 1.4em;
+            color: @black;
+            text-decoration: none;
+           .title {
+               font-weight: bold;
+            }
+
+            .discription {
+                font-style: italic;
+            }  
+        }
+    }
+    
+}

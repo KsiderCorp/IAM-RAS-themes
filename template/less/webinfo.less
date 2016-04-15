@@ -1,0 +1,208 @@
+// out: ../css/webinfo.css, compress:true, autoprefixer:true
+
+@import (inline)  "https://fonts.googleapis.com/css?family=PT+Mono|Bad+Script&subset=latin,cyrillic";
+
+@import "media.less";
+
+@mono:'PT Mono', sans-serif;
+@italic:'Bad Script', sans-serif;
+
+@blockcolor: #f1c40f;
+@textcolor: #2c3e50;
+@cardcolor: #fff;
+
+.vertical {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+}
+.absolute {
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+}
+
+.bgc {    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.upper(@fz) {
+    font-size: @fz;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+.web-info {
+   min-height: 100%;
+    &_header {
+        .info-titel {
+          padding: 10% 0 7%;
+            font-size: 2.3em;
+            text-align: center;
+            
+        }        
+    }
+    
+    &_cheif {
+        position: relative;
+        
+        .cheif {
+            
+        &-photo {
+            .bgc;
+            .absolute;
+            z-index: 1;
+            background-image: url(https://pp.vk.me/c11271/u553902/671136/z_2413bfeb.jpg);
+            
+      .max(768px, { 
+          position: relative;
+          padding-bottom: 60%;
+          background-image: url(https://pp.vk.me/c625628/v625628902/33093/WMYT1P7I9cw.jpg);
+          
+          box-shadow: inset 0 0 0 1em #1abc9c;
+            });       
+       
+            }
+            
+        &-text {
+            position: relative;
+            z-index: 3;
+
+            margin-left: 40%;
+            padding: 10% 0;
+            color: #fff;
+            background-color: #1abc9c;
+
+            text-align: center;
+            
+ .max(768px, {  margin: 0;  });
+            
+            } 
+            
+            &-name{
+                font-size: 3em;
+                line-height: 100%;
+                
+                a {
+                color: #fff;
+                text-decoration: none;
+                }
+                
+                 :nth-child(even){
+                     font-weight: bold;
+                     display: block;
+                        } 
+            } 
+            &-posit{
+                padding: 1em;
+                font-family: @mono;
+            }   
+            &-contact {
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 5em;
+                    line-height: 0;
+                }
+            }
+        }
+  }
+    
+    &_content {
+        text-align: center;
+        font-size: 2.5em;
+        width: 50%; margin: 5% auto;
+        font-family: @mono;
+        
+        p {
+          line-height: 150%;  
+        }
+        
+    }
+    
+    
+    
+    &_board {
+        padding: 5% 0 10%;
+        text-align: center;
+        
+        .web_info-block {
+           width: 65%; 
+           margin: 0 auto;
+            
+           margin-bottom: 5%; 
+        }
+        
+        .web_info-img {
+            .bgc;
+            padding-bottom: 100%;
+            border-radius:  0% 50%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+            
+            &:hover {
+              border-radius: 50% 0%;  
+            }
+            }
+        .web_info-card {
+            display: block;
+            text-decoration: none;
+            color: #000;
+           }
+        .web_info-description {
+            padding: 1em 0;
+        }
+        .web_info-name {
+            .upper(1em);
+            text-decoration: none;
+         :nth-child(even){
+             font-weight: bold;
+             margin-left: 0.4em;
+                }
+            
+        }
+        .web_info-position {
+            font-family: @italic;
+            
+        }
+        
+        
+    }
+    
+    &_special {
+        
+           .info-stat {
+           text-align: center; 
+            .statistics {
+                width: 40%;
+                margin: 2em auto;
+                padding: 1em;
+                border: 2px dashed #313131;
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
