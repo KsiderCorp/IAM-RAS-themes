@@ -110,14 +110,11 @@ $image = wp_get_attachment_image_src( $attachment_id, $size ); else : endif; ?>
 
 <?php if( get_field('cover') ):?>
 <style>
-.emptygift.id-<?php the_ID(); ?> {background-image: url(<?php the_field('cover'); ?>);}
+.emptygift.id-<?php the_ID(); ?> {
+    background-image: url(<?php the_field('cover'); ?>);
+    }
 </style>
 <?php else : ?>
-<style>
-.emptygift.book {background-image: url(<?php bloginfo("template_url"); ?>/img/gifts/bookcover.svg);}
-.emptygift.patent {background-image: url(<?php bloginfo("template_url"); ?>/img/gifts/idea.svg);}
-.emptygift.gift {background-image: url(<?php bloginfo("template_url"); ?>/img/gifts/reward.svg);}
-</style>
 <?php endif; ?>	
 
 <div class="emptygift id-<?php the_ID(); ?> <?php if( has_term('book', 'bookgift') ): echo 'book'; elseif( has_term('patents', 'bookgift') ): echo 'patent'; else : echo 'gift'; endif; ?>">
