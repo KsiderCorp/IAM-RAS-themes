@@ -134,7 +134,7 @@ if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post()
 ?>
 
 <div class="person-book_list">
-<a href="#gift" rel="<?php the_ID(); ?>" class="popup-with-move-anim gift-link post-link"  data-link="<?php echo home_url();?>/ajaxloader/">
+<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>" class="gift-link post-link"  data-link="<?php echo home_url();?>/ajaxloader/">
 <?php the_title(); ?></a>
 </div> 
   
@@ -156,9 +156,3 @@ if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post()
 </div>
 
 </div>
-
-<div class="bookcontent zoom-anim-dialog white-popup mfp-hide" id="gift">
-<div id="single-post-container">
-
-</div>
-</div> 
