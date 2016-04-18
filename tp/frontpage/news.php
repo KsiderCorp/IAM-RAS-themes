@@ -125,7 +125,7 @@ if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $po
 
 <h3>
 <a href="/category/news/">
-Архив
+Новости
 </a>
 </h3>
 </div>

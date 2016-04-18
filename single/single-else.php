@@ -111,6 +111,7 @@ if( has_term( '', 'post_tag', $post->ID ) ){
     'posts_per_page' => 3, 
     'orderby'=> 'date',
     'order'=> 'DESC', 
+    'exclude' => $post->ID,
     'tax_query' => array(
 		'relation' => 'OR',
 		array(

@@ -39,7 +39,7 @@
 <li><a href="/getmail/">Заявка на почту</a></li>
 <li><a href="https://mail.yandex.ru/?pdd_domain=iam.ras.ru">Вход на почту</a></li>
 <li><a href="http://iam.ras.ru/employees/">Сотрудники</a></li>
-<li><a href="https://www.youtube.com/channel/UC5sZXxnq-14Fx8Muyj3NK6A"><i class="icon-youtube"></i></a> <a href="https://plus.google.com/103876993466338875009/videos"><i class="icon-google-plus-1"></i></a></li>
+<li><a href="https://www.youtube.com/channel/UC5sZXxnq-14Fx8Muyj3NK6A"><i class="icon-youtube"></i></a> <a href="https://plus.google.com/103876993466338875009/videos"><i class="icon-google-plus-1"></i></a> <a href="https://github.com/KsiderCorp/"><i class="icon-hierarchy-2"></i></a></li>
 </ul>
 </div>
 
