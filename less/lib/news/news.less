@@ -1,0 +1,267 @@
+// main: ../../style.less
+
+/* news */
+.news_table_head {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;  
+    padding: 1em 0;
+}
+
+.overnews {
+    padding: 5% 0;
+    background-color: #373737;
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}
+	
+.linenews { padding:0;}	
+
+
+a.newslink {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #000;}
+
+
+.nlineblock_wrap {
+        
+    padding-bottom: 0.4em;    
+    &:nth-child(2n+1) {
+       padding-right: 0.2em; 
+    }
+    &:nth-child(2n) {
+     padding-left: 0.2em;  
+    }
+}
+.nlineblock {
+    position: relative;
+    padding-bottom: 40%;
+	overflow: hidden;
+    .max(35em, {padding-bottom: 20%;}); 
+    
+    a {    
+        padding:1em;
+        color: #fff;
+        
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        z-index: 2;
+        display: block;
+        text-decoration: none;
+        
+        .upper(0.7em);
+        .fdates {
+          color: #f2f2f2;
+          font-size: 0.9em;
+          padding-top: 0.5em;
+           text-decoration: none;
+        }
+        &:hover {
+            opacity: 0.5; 
+        }
+    }
+    
+    .shadow {
+        
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,373737+100&0+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(55,55,55,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(55,55,55,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(55,55,55,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#373737',GradientType=0 ); /* IE6-9 */
+
+
+
+        display: block;
+        position: absolute;
+        top: 0;right: 0;bottom: 0;left: 0;
+        z-index: 3;
+    }
+
+}
+
+
+
+
+.stickyblock {
+	width:100%; 
+	padding-bottom:100%;
+}
+	
+.slipcover {
+    width:100%; 
+    padding:5%;
+    padding-top: 20%;
+    color: #fff;
+    
+    .slipcontent {
+        position: relative;
+        z-index: 3;
+        padding-left:1em;
+        }
+    .shadow{
+        position: absolute;
+        top: 0;bottom: 0;right: 0;left: 0;
+        z-index: 1;
+        background-color: #313131;
+        opacity: 0.3;
+        
+        
+        }
+  &:hover .shadow{
+            opacity: 0.5;} 
+
+}
+
+
+
+.slipnews {
+    position: relative;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    
+    h3{
+        margin:0;
+        font-size:1em;
+        font-family: @sans;
+        line-height: 120%;
+        font-weight: lighter;
+    .upper(1em);
+	}
+    a{
+        color:#fff;}
+    p{
+        color:@white;
+        font-size:1em;
+        line-height:120%;}
+}
+
+
+	
+a.allnews {
+  display: inline-block;
+  text-decoration: none;
+  color: #2980b9;
+  padding: 0.2em;
+  font-size: 1em;
+  z-index:10; 
+  position:relative;
+  border-bottom: 3px solid #2980b9;
+    
+    &:hover {
+       color: #c0392b; 
+    }
+}
+
+
+
+
+/* archive news */
+.category-news_archive {
+    margin-right: 2em;
+}
+
+.newsexcerpt {
+  font-size: 0.8em;
+}
+
+.helpline {
+  padding: 1em 0;
+}
+
+.categories {
+  padding: 1em 0;
+}
+
+.tags {
+  padding: 1em 0;
+ }
+
+
+.categories {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+        
+      li {
+          list-style-type: none;
+          &:before {
+              content: "- ";
+              color: #e74c3c;
+              margin-right: 0.2em;  
+          }
+          
+          &.current-cat {
+              
+              & > a {
+                  color: #2c3e50;
+                  text-decoration: none;  
+              }
+              
+              &.current-cat:before {
+                  content: "+ ";
+                  color: #e74c3c;
+                }
+          }
+          
+         ul {
+              padding-left: 1em;
+            } 
+          
+        }  
+    }    
+}
+
+
+.rss {
+  padding: 1em;
+  margin-left: 1em;
+    a {
+  text-decoration: none;
+    }
+}
+
+
+.sidedate {
+  padding: 1em 0;
+  
+}	
+.pure-social {
+	padding: 1em 0;
+}
+
+.sideofnews {
+	padding-left: 2em;
+}
+
+
+.fano_rss {
+    padding: 2em;
+    border: 1px solid #ddd;
+    font-size: 0.8em;
+    
+    a {
+        color: #16a085;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+        display: inline-block;
+        padding: 1em 0; 
+            span {
+                font-size: 0.8em;
+                color: #ddd;
+                display: block;
+            }
+            
+        }
+    }
+    
+}
+
+
