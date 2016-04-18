@@ -44,7 +44,24 @@
  </div>
         <div class="pure-u-1-3">
             <div class="scs right">
-        <?php the_category(' '); ?>	
+
+   <?php 
+$category = get_the_terms( $post->ID, 'category' );
+
+foreach( $category as $caty ){
+    
+   if($caty->name != 'Новости') {    
+echo '<a href="'. get_term_link( (int)$caty->term_id, $caty->taxonomy ) .'">'. $caty->name .'</a>';
+    }     
+}      
+    
+  
+
+		
+                
+   ?>        
+           
+           
             </div>
        </div>
        </div>
@@ -91,12 +108,9 @@ if( has_term( '', 'post_tag', $post->ID ) ){
     
     $rel = array( 
 	
-   'post__not_in' => $poid,
-    'post_type'=>'science',
     'posts_per_page' => 3, 
     'orderby'=> 'date',
     'order'=> 'DESC', 
-        
     'tax_query' => array(
 		'relation' => 'OR',
 		array(
