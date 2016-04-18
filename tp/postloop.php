@@ -1,10 +1,14 @@
 <div class="pure-g">
 <div class="pure-u-1" >
 <h4>
-<a href="<?php the_permalink(); ?>"  class="post-link" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/">
+<a href="<?php the_permalink(); ?>">
 <?php the_title(); ?>
 </a>
 </h4>
+
+<!--
+class="post-link" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/"
+-->
 
 <div class="newsexcerpt">
 <?php the_excerpt(); ?>
