@@ -47,7 +47,6 @@
 <body>
 
 <?php if( is_page('history')):?>
-
 <?php else :?>
 <?php get_sidebar();?> 
 <?php endif; ?>	

@@ -12,8 +12,10 @@
 <div class="sc_single-title novideo">
 
     <div class="sc_single-name">
+      
        <?php the_title(); ?>
-        <a href="/news" class="hprew">/Новости</a>
+       
+       <a href="/news" class="hprew">/Новости</a>
         
     </div>
 </div>
