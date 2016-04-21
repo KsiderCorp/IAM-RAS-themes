@@ -7,7 +7,7 @@
 
 <div class="pure-u-2-3 pure-u-sm-1">
 
-<div class="pure-g">
+<div class="slip_news-block">
   
               
         <?php
@@ -17,52 +17,32 @@ rsort( $sticky );
 $sticky = array_slice( $sticky, 0, 10);
 $argst = array( 
 'category_name' => 'news',
-'posts_per_page' => 2, 
+'posts_per_page' => 4, 
 'order'=> 'DESC',
 'post__in' => $sticky,
 'caller_get_posts' => 1, );
 query_posts($argst );
 if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;?>
-<div class="pure-u-1-2 pure-u-sm-1">
-<div class="slipnews">
 
-<?php if( has_post_thumbnail() ):?>
- <?php
-$image_id = get_post_thumbnail_id();
-$image_url = wp_get_attachment_image_src($image_id);
-$image_url = $image_url[0];?>
+<div class="slipnews id<?php the_ID(); ?>">
 
+<?php 
+$image_url = ''; 
+if( has_post_thumbnail() ):
+    $image_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_image_src($image_id);
+    $image_url = $image_url[0];
+    
+elseif( get_field('postphoto') ):
+    $image_url = get_field('postphoto');    
 
-<style>
-.slipcover.id<?php the_ID(); ?> {
-background:	#2c3e50 url(<?php echo $image_url;?>);
-	background-size:cover; 
-	background-repeat:no-repeat;
-	background-position:50% 50%;}
-</style>
-
- <?php elseif( get_field('postphoto') ):?>
-<style>
-.slipcover.id<?php the_ID(); ?> {
-background:	#2c3e50 url(<?php the_field('postphoto'); ?>);
-	background-size:cover; 
-	background-repeat:no-repeat;
-	background-position:50% 50%;}
-</style>
-<?php else : ?>
-<style>
-.slipcover.id<?php the_ID(); ?> {
-background:	url(<?php bloginfo("template_url"); ?>/img/newsfon.svg);
-	background-size:cover; 
-	background-repeat:no-repeat;
-	background-position:50% 50%;}
-</style>
-<?php endif; ?>
-
-
-
+else : 
+    $image_url = bloginfo("template_url").'/img/newsfon.svg'; 
+endif; ?>
+<style>.slipnews.id<?php the_ID(); ?> {background-image: url(<?php echo $image_url;?>);}</style>
 
 <div class="slipcover id<?php the_ID(); ?>">
+   
     <div class="slipcontent">
         <h3>
 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -72,11 +52,11 @@ background:	url(<?php bloginfo("template_url"); ?>/img/newsfon.svg);
         </p>
     </div>
 
-    <div class="shadow animation"></div>
+    
 </div>
-
+<div class="shadow animation"></div>
 </div>
- </div>
+ 
 <?php endwhile; endif; ?>
 
 </div>

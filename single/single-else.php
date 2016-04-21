@@ -110,7 +110,7 @@ if( has_term( '', 'post_tag', $post->ID ) ){
     
     $rel = array( 
 	
-    'posts_per_page' => 3, 
+    'posts_per_page' => 5, 
     'orderby'=> 'date',
     'order'=> 'DESC', 
     'exclude' => $post->ID,
@@ -131,17 +131,13 @@ foreach ($screl as $post) :  setup_postdata($post);
             
 <?php if( get_field('postphoto') ):
     $image = get_field('postphoto'); ?>
-    <style>
-        .sc-related-pic.id<?php the_ID();?> {
-            background-image: url(<?php echo $image; ?>);
-        }
-    </style>
+<style>.sc-related-pic.id<?php the_ID();?> {background-image: url(<?php echo $image; ?>);}</style>
 <?php else : endif; ?>         
 
             
 
 <a class="sc-related-block" href="<?php the_permalink(); ?>" class="">
-<div class="sc-related-pic id<?php the_ID();?>"></div>
+<!--<div class="sc-related-pic id<?php the_ID();?>"></div>-->
 <div class="sc-related-title">
 <div class="sc-related-authors"><?php the_time('j F, Y | G:i'); ?></div>
        <div class="sc-related-names"><?php the_title(); ?></div>

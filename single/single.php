@@ -14,7 +14,10 @@
  include(TEMPLATEPATH . '/single/single-employees.php');   
  
  elseif( is_singular('science') ) : 
- include(TEMPLATEPATH . '/single/single-science.php');  
+ include(TEMPLATEPATH . '/single/single-science.php');   
+
+ elseif( is_singular('gift') ) : 
+ include(TEMPLATEPATH . '/single/single-gift.php');  
  
  else : 
  include(TEMPLATEPATH . '/single/single-else.php'); 
