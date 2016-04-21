@@ -99,7 +99,7 @@
     color: #fff;
     text-align: center;
     width: 50%;
-    padding: 1em 0;
+    padding: 1.3em 0;
     display: block;
     position: relative;
     text-decoration: none;
@@ -112,7 +112,16 @@
     
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    }   
+    } 
+    
+.underirght {
+    text-align: center;
+    color: #fff; 
+    padding: 0.2em 0;
+    }
+.underirght a{
+    color: #fff;    
+    }
 </style>
 	
 <div class="page404" id="rand">
@@ -126,14 +135,14 @@
         <div class="navigator">
 
 
-            <a href="/">
+            <a href="/?from=404">
                 <span>Главная</span>
             </a>
 
-            <a href="<?php echo home_url('/category/news/'); ?>">
+            <a href="<?php echo home_url('/category/news/?from=404'); ?>">
                 <span>Новости</span>
             </a>              
-            <a href="<?php echo home_url("/science/"); ?>">
+            <a href="<?php echo home_url("/science/?from=404"); ?>">
                 <span>Поп-наука</span>
             </a>            
             <a href="<?php echo home_url('/index.php?s='); ?>">
@@ -142,7 +151,8 @@
 
         
         </div>
-
+    <div class="underirght">
+    <a href="/webinfo/?from=404">info</a> &middot; <a href="http://nikolaysemenov.ru/?from=iam404">nikolaysemenov.ru</a></div>
     </div>
 
 </div>
