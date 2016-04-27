@@ -13,7 +13,7 @@ $image = '';
 if( get_field('cover') ):
 $image = get_field('cover');
 else :
-$image =  bloginfo("template_url") .'/img/emploers/yo.svg';
+$image =  get_bloginfo("template_url") .'/img/emploers/yo.svg';
 endif;
 
 
