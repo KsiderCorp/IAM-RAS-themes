@@ -168,9 +168,9 @@ $('.sc_single-head').exists(function () {
 
 /* Добавление в ЯД */
  $('.addc').click(function () {
-  var $inp = $("#inp");
-  var $inpv = $inp.val();
-     var $plus = $(this).attr("rel");
+	var $inp = $("#inp");
+	var $inpv = $inp.val();
+    var $plus = $(this).attr("rel");
                 $inp.val(parseInt($inpv) + parseInt($plus));
                 $inp.change();
                 return false;

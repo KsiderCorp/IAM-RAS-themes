@@ -20,36 +20,6 @@
         <div class="signature"></div> 
         </div>   
     </div>  
-    
-<div class="science_navigation-paged">
-<ul>
-<?php
-$terms = get_terms( 'science_categories', array('parent' => 0, 'hierarchical' => 0, 'hide_empty' => 1 ) );
-foreach ( $terms as $term ){    
-    $tid =  $term->term_id; 
-    $termname = 'science_categories';
-    $image = '';   
-if( get_field('photo', 'science_categories_'.$tid) ):
-    $attachment_id = get_field('photo', 'science_categories_'.$tid);
-    $size = "medium";
-    $image = wp_get_attachment_image_src( $attachment_id, $size );
-else : endif;  
-    $termname = $term->name;
-    $termlink = get_term_link( $term );
-?>
-<!--<style>
-.coID.i<?php echo $tid; ?> {
-	background-image:url(<?php echo $image[0];?>);}
-</style>-->
-
-<li class="coID i<?php echo $tid;?>">
-<a href="<?php echo $termlink;?>"><span><?php echo $termname;?></span></a>
-</li>
-
-<?php  } ?> 
-
-</ul>    
-</div> 
 
 <?php else : ?>
 
@@ -80,8 +50,44 @@ else : endif;
 <div class="science-content">
    <div class="block">
     <div class="pure-g">
+    <div class="pure-u-1-5">
+    
+<div class="science_navigation-paged">
+<ul>
+<?php
+$terms = get_terms( 'science_categories', array('parent' => 0, 'hierarchical' => 0, 'hide_empty' => 1 ) );
+foreach ( $terms as $term ){    
+    $tid =  $term->term_id; 
+    $termname = 'science_categories';
+    $image = '';   
+if( get_field('photo', 'science_categories_'.$tid) ):
+    $attachment_id = get_field('photo', 'science_categories_'.$tid);
+    $size = "medium";
+    $image = wp_get_attachment_image_src( $attachment_id, $size );
+else : endif;  
+    $termname = $term->name;
+    $termlink = get_term_link( $term );
+?>
+<!--<style>
+.coID.i<?php echo $tid; ?> {
+	background-image:url(<?php echo $image[0];?>);}
+</style>-->
 
-<?php 
+<li class="coID i<?php echo $tid;?>">
+<a href="<?php echo $termlink;?>"><span><?php echo $termname;?></span></a>
+</li>
+
+<?php  } ?> 
+
+</ul>    
+</div>   
+        
+    </div>
+    
+       
+    <div class="pure-u-4-5">
+     
+          <?php 
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;   
 $arg = array( 
     'paged'=> $paged,
@@ -121,7 +127,6 @@ foreach($cur_terms as $cur_term){
 .science-post_margin.id-<?php the_ID(); ?> {background-image:url(<?php echo $image[0]; ?>);}
 </style>
 
-<div class="pure-u-1">
    <div class="science-post_margin id-<?php the_ID(); ?>">
     <div class="pure-g">
 
@@ -178,10 +183,13 @@ $vidlink = 'XRGFpqdIQRE';
     
     <div class="shadow"></div>
    </div> 
-</div>
+
 
 <?php wp_reset_postdata(); ?>
  <?php endwhile; else :  endif; ?> 
+           
+    </div>
+
 
 </div>        
         
