@@ -36,11 +36,8 @@
 
 <?php the_content(); ?>
 
-<div class="zoom-anim-dialog white-popup mfp-hide" id="rule">
-   <?php if( get_field('terms') ): the_field('terms'); else : endif; ?> 
-</div>
 <hr>
-<?php // include(TEMPLATEPATH . '/tp/confer/registration.php'); ?>
+<?php include(TEMPLATEPATH . '/tp/confer/registration.php'); ?>
 			
 				</div>
 			</div>
@@ -49,7 +46,7 @@
 	</div>
 	
 
-	<div class="block">
+<div class="block">
 		<div class="check-pay" id="pay">
 			<div class="pure-g">
 			<div class="pure-u-1">
@@ -76,7 +73,7 @@
 <img src="<?php bloginfo("template_url"); ?>/img/banking.svg"><br><strong>Банковским переводом</strong>
 </div>
 
-Воспользуйтесь <a href="#line1" class="popup-with-move-anim post-link">реквизитами</a> и <a href="https://www.dropbox.com/s/lquwfbaqg8j2ves/poruchenie.doc?dl=0" target="_blank">образцом оформления платежного поручения</a> и <a href="https://www.dropbox.com/s/cen74pw7ob3ufsj/kvitancia.xls?dl=0">образцом квитанции</a>. 
+Воспользуйтесь <a href="#line1" class="popup-with-move-anim ">реквизитами</a> и <a href="https://www.dropbox.com/s/lquwfbaqg8j2ves/poruchenie.doc?dl=0" target="_blank">образцом оформления платежного поручения</a> и <a href="https://www.dropbox.com/s/cen74pw7ob3ufsj/kvitancia.xls?dl=0">образцом квитанции</a>. 
 После оплаты нужно будет прислать копию подтверждающего документа по e-mail: <a href="mailto:conference@iam.ras.ru">conference@iam.ras.ru</a> с обязательной пометкой «оргвзнос».
 
  	</div>	
@@ -106,8 +103,6 @@
 <strong>&nbsp;</strong>
 </div>	
 Через систему <a href="https://money.yandex.ru/" class="">Яндекс.деньги</a> оплатить можно как со своего Яндекс.кошелька, так и с банковской карты.
-При облате за несколько докладов, в коментариях необходимо указать их ID, <a href="#gen" class="post-link">полчуенные при регистрации</a>
-<a href="#yamoney" class="yandexmoney popup-modal popup-with-move-anim pay-button">Оплатить</a>
 	</div>	
 	
 <div class="zoom-anim-dialog white-popup mfp-hide" id="yamoney">
@@ -143,12 +138,12 @@
 </div>
 				</div>
 		</div>
- 
 </div>
 			
 	<div class="block">
 <div class="conf-support">
 <h4 class="center">Поддержка</h4>  
+
 <div class="pure-g">
 
 	<div class="pure-u-1-3">
@@ -178,13 +173,17 @@
 			
 <?php if( get_field('line2') ):?>		
 <div class="block">
-	<div class="parner">
+	<div class="parner conf-info-parners">
 <div class="conf-part">
 Партнеры
 </div>
-	<div class="clearfix">
-<?php the_field('line2'); ?>
-	</div>
+
+
+	<div class="conf-info-terms conf-info-supports">
+<?php if( get_field('line2') ): the_field('line2'); else : endif;  ?>	
+    </div>
+
+	
 	</div>
 </div>	
 <?php else : ?>
@@ -201,27 +200,29 @@
 </div>
 
 <script>
-	var inputs = Array.prototype.slice.call(document.querySelectorAll('.selectmon')),
-    inp = document.querySelector("#inp");
-inputs.forEach(function (c) {
-    c.onclick = function () {
-        var a = [];
-        inputs.forEach(function (b) {
-            b.checked && a.push(b.value)
-        });
-        inp.value = a
-    }
-});
-  
-
-var numLow = '100';
-var numHigh = '999';
-var adjustedHigh = (parseFloat(numHigh) - parseFloat(numLow)) + 1;
-var numRand = Math.floor(Math.random()*adjustedHigh) + parseFloat(numLow);
-var date = new Date();
-var datlog = date.getHours()+''+date.getMinutes()+''+date.getSeconds();
- 
-document.getElementById('gen').value = datlog+'-MKMK2015-'+numRand; 
     
+function generatePassword(length) {
+    var length,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}  
+  
+var date = new Date();
+
+var numLow = date.getHours();
+var numHigh = date.getMinutes();
+var adjustedHigh = (parseFloat(numHigh) - parseFloat(numLow)) + 1;
+// var numRand = Math.floor(Math.random()*adjustedHigh) + parseFloat(numLow);
+var numRand = numHigh+''+numLow;
+
+ 
+document.getElementById('passgen').value = generatePassword(25); 
+document.getElementById('gen').value = generatePassword(2)+numRand;     
+    
+   
   
 </script>

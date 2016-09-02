@@ -1,13 +1,5 @@
 <?php get_header(); ?>
-<style>
-#navig.gettop,
-#navig.gettop #searchform,
-#navig.gettop #searchform input[type=search]
-		{background:transparent; color:#fff;} 
-#navig.gettop a { color:#fff;}	
-#navig.gettop .logoblock a.logo {border-left: 4px solid #fff;
-}		
-</style>
+<?php include(TEMPLATEPATH . '/template/navstyle.php'); ?>
 <?php 
 $hboss = array( 
 'post_type'=>'employees',
@@ -68,7 +60,7 @@ $employ = array(
 	),
 'post_type'=>'employees',
 'posts_per_page' => -1, 
-    
+'exclude'        => '29',    
 'orderby'=> 'rand',
 'order'=> 'ASC', ); 
 ?>

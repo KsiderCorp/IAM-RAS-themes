@@ -44,6 +44,7 @@
     <li><a href="/history" class="front_conf-banner">Об Институте</a></li>
     <li><a href="/category/reports/">Отчеты по публикациям</a></li>
     <li><a href="/category/purchase/">Отчеты по Закупкам</a></li>
+    <li><a href="/srw/">НИР</a></li>
 
   
 
@@ -123,7 +124,8 @@ $lncmmcm = "109";
              
 <a id="navline"></a>
 
- <div class="version"><a href="http://nikolaysemenov.ru">v.2.8</a></div> 
+ <div class="version">
+ <a href="http://nikolaysemenov.ru">v.2.8</a></div> 
 </div>
 
 

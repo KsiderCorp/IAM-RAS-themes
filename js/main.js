@@ -1,4 +1,5 @@
-var svgloader = '<div class="loader" title="2"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#f1c40f" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg></div>';	
+var svgloader = '<div class="loader" title="2"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path fill="#f1c40f" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/></path></svg></div>';
+
 
 $(document).ready(function() {
 	
@@ -13,13 +14,21 @@ $.fn.exists = function(callback) {
 };		
 	
 
-$("a.scrollto, a[href*='#']").click(function() {
-		var elementClick = $(this).attr("href")
+// $("a.scrollto, a[href*='#']").click(function() {
+		// var elementClick = $(this).attr("href")
+		// var destination = $(elementClick).offset().top;
+// jQuery("html:not(:animated),body:not(:animated)").animate({	scrollTop: destination
+		// }, 800);
+		// return false;
+// });
+
+$(document).on("click", "a.scrollto, a[href*='#']", function(event){
+    	var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
-jQuery("html:not(:animated),body:not(:animated)").animate({	scrollTop: destination
+	jQuery("html:not(:animated),body:not(:animated)").animate({	scrollTop: destination
 		}, 800);
 		return false;
-	});
+});
 	
 
 $('#navline').exists(function() {	
@@ -33,7 +42,7 @@ $(window).scroll(function() {
 });
 });
     
-    $('#scline').exists(function() {	
+$('#scline').exists(function() {	
 var menu = document.getElementById('#navline');
 $(window).scroll(function() {
 	if (($('#scline').offset().top) <= $(this).scrollTop()) {
@@ -86,61 +95,8 @@ $(".closepost").click(function(){
 	$(".closepost").fadeOut(300);
 	$("html").css("overflow-y","auto");
   });
-    
-    
-    
-$("#report_plan").click(function(){
-     if(!$('#modal_id').is(":visible")){
-         $('#modal_id').fadeTo(500,1);
-         $("html").css("overflow-y","hidden");
-     } else{
-        $('#modal_id ').fadeOut(500);
-        $("html").css("overflow-y","auto");
-     }
-  });
+  
 
-$('#report_titel').exists(function () {
-
-    var reportli = $('.report_menu .spied ul li');
-    var reportlogo = $('.report_logo');
-
-    $(window).scroll(function () {
-        if (($('.report_text-block').offset().top) <= $(this).scrollTop()) {
-            reportlogo.animate({
-                height: "0",
-            }, {
-                queue: false,
-                duration: 600,
-                easing: 'easeOutQuart'
-            });
-
-            reportli.animate({
-                height: "14.28%",
-            }, {
-                queue: false,
-                duration: 600,
-                easing: 'easeOutQuart'
-            });
-        } else {
-            reportlogo.animate({
-                height: "20%",
-            }, {
-                queue: false,
-                duration: 600,
-                easing: 'easeOutQuart'
-            });
-
-            reportli.animate({
-                height: "11.43%",
-            }, {
-                queue: false,
-                duration: 600,
-                easing: 'easeOutQuart'
-            });
-        }
-    });
-
-});
 
 $('#video-block').exists(function () {
     $('.video-loader').click(function () {
@@ -151,6 +107,8 @@ $('#video-block').exists(function () {
         return false;
     });
 });
+    
+    
 $('.sc_single-head').exists(function () {
    (function () {
         $(window).scroll(function () {
@@ -161,20 +119,126 @@ $('.sc_single-head').exists(function () {
     }.call(this));
 });
     
+
+    
+$('.eng-content').exists(function () {  
+    
+var anchor = $('#story');
+var heightpos = anchor.offset().top;
+var startpoint = heightpos - 500; 
+    
+var develop = $('.eng-develop');
+var header = $('.eng-header');
+var develop_top = header.offset().top + 50;  
+    
+var opblock = $('#story .block');    
+    
+var oVal;
+
+$(window).scroll(function() {
+        
+if ( develop_top <= $(this).scrollTop()) {
+      develop.css('marginLeft', 0);
+      develop.css('opacity', 1);
+      }
+    else {
+        develop.css('opacity', 0.5);
+        }
+        
+
+if ( startpoint <= $(this).scrollTop()) {
+
+            var RA = startpoint;
+            var RH = $(this).scrollTop();        
+            var RB = heightpos;
+            var AB = 500;
+            var AH = RH - RA;
+            var diap2 = AH / AB;    // 500 рост
+
+
+            oVal = diap2;
+
+
+            return opblock.css('opacity', oVal);
+
+        } else {
+            return opblock.css('opacity', 0);
+        }
+    });
+
+
+ 
+
+});
+  
+
+  
+$('.flickr').exists(function() {
+     $('.flickr').each(function ()  {
+var apikey= 'd1cffee80470f8d8f649a0e40bfacf28';
+var album= $(this).data('id');
+       
+var perpage = $(this).data('count');
+var sz = $(this).data('size');
+var that = $(this); 
+         
+ var extr = 'license,date_upload,date_taken,owner_name,icon_server,original_format,last_update,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_q,url_t,url_s,url_c,url_m,url_o';
+var apiCall = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key="+apikey+"&user_id="+album+"&format=json&extras="+extr+"&per_page="+perpage+"&jsoncallback=?";
+
+    $.getJSON(apiCall, function(data){
+    
+   that.html('');
+        
+    $.each(data.photos.photo, function(i,photo){
+      var img_src = photo['url_'+sz];
+      var a_href = photo['url_o'];
+      var id = photo['id'];
+      var alias = photo['pathalias'];
+      var url = 'https://www.flickr.com/photos/'+alias+'/'+id;
+
+that.append('<div class="flickr_img"><a href="'+url+'" class="flickr_image" style="background-image: url('+img_src+');">&nbsp;</a></div>')
+ 
+
+      });
+    });
+
+  });   
+ });
+
+$('.flickr_shortcode').exists(function() {
+     $('.flickr_shortcode').each(function ()  {
+var apikey= 'd1cffee80470f8d8f649a0e40bfacf28';
+var album= $(this).data('id');
+       
+var perpage = $(this).data('count');
+var sz = $(this).data('size');
+var that = $(this); 
+         
+ var extr = 'license,date_upload,date_taken,owner_name,icon_server,original_format,last_update,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_q,url_t,url_s,url_c,url_m,url_o';
+var apiCall = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+apikey+"&photoset_id="+album+"&format=json&extras="+extr+"&per_page="+perpage+"&jsoncallback=?";
+
+    $.getJSON(apiCall, function(data){
+    
+   that.html('');
+        
+    $.each(data.photoset.photo, function(i,photo){
+      var img_src = photo['url_'+sz];
+      var a_href = photo['url_o'];
+      var id = photo['id'];
+      var alias = photo['pathalias'];
+      var url = 'https://www.flickr.com/photos/'+alias+'/'+id;
+
+that.append('<div class="flickr_img"><a href="'+url+'" class="flickr_image" style="background-image: url('+img_src+');">&nbsp;</a></div>')
+ 
+
+      });
+    });
+
+  });   
+ });    
+    
     
 
-
-	
-
-/* Добавление в ЯД */
- $('.addc').click(function () {
-	var $inp = $("#inp");
-	var $inpv = $inp.val();
-    var $plus = $(this).attr("rel");
-                $inp.val(parseInt($inpv) + parseInt($plus));
-                $inp.change();
-                return false;
-            });
   	
 	
 // Lightbox
@@ -248,21 +312,15 @@ $(document).on("click", "#sitback", function(event){
 	window.history.back(); 
 });
     
-   
-	
-	
+
+
+
 });
 
 // neo
 
 $(document).ready(function(){
-  $('form input[type="file"]').change(function () {
-var file = $('form input[type="file"]').val().split("\\");	  
-	  
-$('form .filename').text( this.files.length + " Файл добавлен: " + file[file.length-1]);
-	  
-  });
-
+    
   
   $('.fcont').click(function() {
 	$(".mappat").slideToggle("slow");
@@ -277,20 +335,7 @@ $('.bloclose').click(function() {
 		return false;
 	});
 	
-	
-	var maxCount = 200;
 
-    $("#counter").html(maxCount);
-
-    $("#review-text").keyup(function() {
-    var revText = this.value.length;
-
-        if (this.value.length > maxCount)
-{this.value = this.value.substr(0, maxCount);}
-        var cnt = (maxCount - revText);
-        if(cnt <= 0){$("#counter").html('0');}
-        else {$("#counter").html(cnt);}
-    });
 });
 
 

@@ -19,6 +19,11 @@
 <ul class="sidem">
 
 <li>
+<a class="" href="/en/">&middot; en</a>
+<?php  include(TEMPLATEPATH . '/tp/searchform.php'); ?>
+</li>
+
+<li>
 <a class="" id="searchopen"><i class="icon-search-1"></i></a>
 <?php  include(TEMPLATEPATH . '/tp/searchform.php'); ?>
 </li>

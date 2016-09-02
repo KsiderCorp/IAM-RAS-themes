@@ -1,5 +1,5 @@
 <?php
-  function icon($atts) {
+function icon($atts) {
    extract(shortcode_atts(array(
       'class' => 'icon-phone-sign',
       ), $atts));
@@ -129,7 +129,6 @@ return $br;}
 add_shortcode( 'bfl', 'floate_block' );
 
 
-
 function emp_insert($eid) {
 global $post;
 $myposts = get_posts('include='.$eid.'&post_type=employees');
@@ -167,5 +166,43 @@ endforeach;
 
 return $retour;
 }
+
+function flickr( $flics ) {
+	extract( shortcode_atts(
+		array(
+			'id' => 'none',
+			'size' => 'm',
+			'count' => '10',
+		), $flics )
+	);
+ $addemp = '<div class="flickr_shortcode" data-id="'.$id.'" data-size="'.$size.'" data-count="'.$count.'" ></div>';   
+return $addemp;
+}
+add_shortcode( 'flickr', 'flickr' );
+
+// Добавляем кнопки в текстовый html-редактор
+add_action( 'admin_print_footer_scripts', 'add_sheensay_quicktags' );
+function add_sheensay_quicktags() {
+   if (wp_script_is('quicktags')) :
+?>
+    <script type="text/javascript">
+      if (QTags) { 
+        // QTags.addButton( id, display, arg1, arg2, access_key, title, priority, instance );
+        QTags.addButton( 'sheens_pep', 'pep', '[pep id=""]', '[/pep]', 'pep', 'Id сотрудника', 1 );
+        QTags.addButton( 'sheens_peplist', 'U_list', '[be id="" grid="5"]', '', 'h', 'Список людей', 2 );        
+        QTags.addButton( 'sheens_float', 'fl', '[bfl fl="left" w="20%"]', '[/bfl]', 'h', 'Плавающий блок', 2 );        
+          
+        QTags.addButton( 'sheens_plashka', 'plashka', '[plashka color="" bgc="" bgi="" url="" display="inline-block"]', '[/plashka]', 'h', 'Плашка', 2 );       
+        
+        QTags.addButton( 'sheens_icon', 'icon', '[i class = "icon-phone-sign"]', '', 'h', 'Иконка', 2 );        
+          
+        QTags.addButton( 'sheens_flickr', 'flickr', '[flickr id="" size="c" count="10"]', '', 'fl', 'Альбом фликра', 2 );
+          
+        QTags.addButton( 'sheens_date', 'date', '[date d="25.05.2016" t="Заголовок" e="опиисание" col="green"]', '', 'timet', 'timtable', 2 );
+      }
+    </script>
+<?php endif;
+}
+
 
 

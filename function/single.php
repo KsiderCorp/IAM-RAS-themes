@@ -7,7 +7,7 @@ define(SINGLE_PATH, TEMPLATEPATH . '/single');
 /**
 * Добавим фильтр, который будет запускать функцию подбора шаблонов
 */
-add_filter('single_template', 'my_single_template');
+add_filter('single_template', 'my_single_template', 10);
  
 /**
 * Функция для подбора шаблона

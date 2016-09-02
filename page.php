@@ -1,69 +1,87 @@
-﻿<?php get_header(); ?>
+<?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/template/css/science.css">
+
+<style>
+.sc_single-head { background-image: url(https://source.unsplash.com/1600x900/?technology); }
+</style>
+
+
+
+<div class="sc_single-txt sc_single-head">
+<div class="sc_single-title novideo">
+    <div class="sc_single-name">
+      
+       <?php the_title(); ?>
+            
+    </div>
+</div>
+ 
+<div class="shadows"></div>
+</div>
+
+<div class="sc_single-footer">
+        
+       <div class="pure-g">
+       <div class="block">
+        <div class="pure-u-1-3">
+            
+        <div class="science-date">
+           <span><?php the_time('j F, Y | G:i'); ?></span>	 
+        </div>
+            
+        </div>
+  <div class="pure-u-1-3 center">
+
+    <div class="likely likely-small" data-single-title="Поделиться">
+		<div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+		<div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
+		<div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+		<div class="gplus" title="Поделиться ссылкой в Гугл-плюсе"></div>
+    </div>
+    
+ </div>
+
+       </div>
+    </div>  
+   
+        
+    </div>    
+
+ 
+
+<div class="sc_single-content" id="content">
+    
 <div class="block">
-<div class="pure-g">
-<div class="pure-u-1">
-<div class="singttl"><h1><?php the_title(); ?></h1></div>
-<hr>
-<a id="navline"></a>
-</div>
+       
+       <div class="pure-g">
+           <div class="pure-u-2-3">    
+        <div class="sc_single-block">
+            <?php the_content(); ?>
+        </div>
+          </div>
+
+       </div>
+
+        
+
+
+</div>  
 </div>
 
 
-<!-- Content -->
-<div class="pure-g">
-<div class="pure-u-3-4">
-<?php the_content(); ?>
-</div>
-<div class="pure-u-1-4">
 
-<div class="categories">
-Новости:	 
-<ul>	
-<?php wp_list_categories('title_li=&orderby=id');?>	
-</ul>
-
-Достижения:
-<ul><?php 
-$terms = get_terms('bookgift');
-foreach ($terms as $term) {
-	echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';}
-?></ul>
-</div>
-
-</div>
-</div>
-
-</div>
+<div class="science-single_comment">
+     <div class="block">
+     <h3 class="center">Коментарии</h3>
+     <?php comments_template(); ?>
+     </div>
+</div> 
 
 
-<!-- коменты -->
-<div class="comm">
 
-<div class="pure-g">
-<div class="block">
-
-<div class="pure-u-1">
-<h3>Коментарии:</h3>
-</div>
-
-</div>
-</div>
-
-<div class="block">
-<div class="commblock">
-
-<div class="pure-g">
-<div class="pure-u-1" >
-<div class="block"><?php comments_template(); ?></div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
 
 <?php endwhile; else : ?>
 <?php endif; ?>

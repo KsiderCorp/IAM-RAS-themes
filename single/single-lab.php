@@ -1,23 +1,8 @@
 <?php if( get_field('topimg') ):?>
+
+<?php include(TEMPLATEPATH . '/template/navstyle.php'); ?>	
+	
 	<style>
-		#navig.gettop,
-		#navig.gettop #searchform,
-		#navig.gettop #searchform input[type=search] {
-			background: transparent;
-			color: #fff;
-		}
-		
-		#navig.gettop a {
-			color: #fff;
-		}
-		
-		#navig.gettop .logoblock a.logo {
-			border-left: 4px solid #fff;
-		}
-#navig #searchform input[type=search] {border: 1px solid #fff;}
-#searchform input[type=submit] {
-    color: #fff;
-}
 		
 		.newsheader {
 			position: relative;

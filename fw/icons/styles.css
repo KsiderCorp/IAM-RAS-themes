@@ -1106,3 +1106,27 @@
 .icon-file-powerpoint-o:before {
   content: "\e04c";
 }
+.icon-download-1:before {
+  content: "\e04d";
+}
+.icon-download-2:before {
+  content: "\e04e";
+}
+.icon-download-3:before {
+  content: "\e04f";
+}
+.icon-cloud-download-2:before {
+  content: "\e050";
+}
+.icon-cloud-download-1:before {
+  content: "\e052";
+}
+.icon-untitled-1:before {
+  content: "\e051";
+}
+.icon-wallet-money:before {
+  content: "\e053";
+}
+.icon-cc-visa:before {
+  content: "\e054";
+}

@@ -1,14 +1,6 @@
 <?php get_header('science'); ?>
 
-<style>
-#navig.gettop,
-#navig.gettop #searchform,
-#navig.gettop #searchform input[type=search]
-		{background:transparent; color:#313131;} 
-#navig.gettop a { color:#313131;}	
-#navig.gettop .logoblock a.logo {border-left: 4px solid 313131;
-}
-</style>
+<?php include(TEMPLATEPATH . '/template/navstyle.php'); ?>
 
 <div class="science-wrap" id="top">
 

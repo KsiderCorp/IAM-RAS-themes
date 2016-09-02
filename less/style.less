@@ -15,6 +15,7 @@ Author: ksider
 @import 'lib/var.less';
 @import 'lib/media.less';
 
+@import 'lib/nav.less';
 
 
 
@@ -33,99 +34,10 @@ Author: ksider
   padding: 2em 0;
 }
 
-/* Nabigation*/
+
 	
-#navig {
-  position: absolute;
-  z-index: 999;
-  top: 0;left: 0;right: 0;
-
--webkit-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-}
-
-#navig.logged {
-    top: 32px;
-}
-
-
-.logoblock a.logo {
-  border-left: 4px solid #3498db;
-  padding-left: 1em;
-}
-
-ul.sidem {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
-.logoblock, ul.sidem li {
-  padding: 1em 0.5em;
-  line-height: 1.4em;
-  position: relative;
-  display: inline-block;
-}
-
-.logoblock {
-  padding: 1em 0em;
-  letter-spacing: 2px;
-}
-
-a.logo, 
-ul.sidem li a {
-  color: #414141;
-  text-decoration: none;
-  padding: 1em;
-  cursor: pointer;
-}
-
-a.logo:hover, 
-ul.sidem li a:hover {
-  color: #95a5a6;
-}
 	
-	/* top search */
-.search {
-  position: relative;
-}
 
-a#searchopen {
-  position: relative;
-  cursor: pointer;
-}
-
-.searchslice {
-  display: none;
-  z-index: 999;
-  position: absolute;
-  top: 100%;
-  left: -250%;
-}
-
-#searchform {
-  padding: 0.2em;
-}
-
-#searchform input {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0.9em;
-  outline: 0;
-  border: 0;
-  color: #414141;
-  font-size: 1em;
-  line-height: 1em;
-}
-
-#navig #searchform input[type=search] {
-  border: 1px solid #414141;
-}
-
-#searchform input[type=submit] {
-  background: transparent;
-  font-family: "untitled-font-1" !important;
-}
 
 /* 	=============	Search result */
 .searchform {
@@ -1910,6 +1822,51 @@ a.plashka:before {
 }
 a.plashka:hover:before {
   opacity: 0;
+}
+
+.flickr_shortcode {
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    
+    -webkit-align-content: stretch;
+    -moz-align-content: stretch;
+    -ms-align-content: stretch;
+    -o-align-content: stretch;
+    align-content: stretch;
+    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+    
+    
+    .flickr_img {
+       width: 20%;    
+        
+        a.flickr_image {
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            text-decoration: none;
+            .bgc;
+        }
+        
+    }
+    
 }
 
 

@@ -16,9 +16,19 @@
     a {
       color: @black;
     }
-    .logoblock {
+   
+}
+.logoblock {
         a {
-          border-left: 4px solid @ycolor;  
+        &:before {
+        content: '';
+        position: absolute;
+        left: -3px; top: 0;bottom: 0;
+        width: 4px;
+        background-color: #313131;
+        
+        transform: rotate(-10deg);
+    }
         }
         a.logo-science {
           border: 0;  
@@ -30,8 +40,6 @@
         }
         
     }
-}
-
 /* header */
 
 .science-head_block {

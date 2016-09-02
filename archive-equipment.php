@@ -1,14 +1,5 @@
 <?php get_header(); ?>
-<style>
-#navig.gettop,
-#navig.gettop #searchform,
-#navig.gettop #searchform input[type=search]
-		{background:transparent; color:#fff;} 
-#navig.gettop a { color:#fff;}	
-.logoblock a.logo {
-  border-left: 4px solid #fff;
-}
-</style>
+<?php include(TEMPLATEPATH . '/template/navstyle.php'); ?>
 
 <div class="eauipmentbody">
 <div class="block">

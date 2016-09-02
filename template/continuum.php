@@ -181,8 +181,8 @@ foreach ($postslist as $post) :  setup_postdata($post);?>
 <div class="pure-u-1-2  pure-u-sm-1">
 
     <div class="continuum_page-form" id="page-form">
-<?php // echo do_shortcode( '[contact-form-7 id="1779" title="continuum"]' ); ?>
-<?php echo do_shortcode( '[contact-form-7 id="2054" title="mech of cont"]' ); ?>
+<?php echo do_shortcode( '[contact-form-7 id="1779" title="continuum"]' ); ?>
+<?php //  echo do_shortcode( '[contact-form-7 id="2054" title="mech of cont"]' ); ?>
     </div>
             <!-- likely-small -->
     <div class="likely  likely-light" data-single-title="Поделиться">

@@ -1,13 +1,5 @@
-<style>
-#navig.gettop,
-#navig.gettop #searchform,
-#navig.gettop #searchform input[type=search]
-		{background:transparent; color:#fff;} 
-#navig.gettop a { color:#fff;}	
-.logoblock a.logo {
-  border-left: 4px solid #fff;
-}
-</style>
+<?php include(TEMPLATEPATH . '/template/navstyle.php'); ?>
+
 <?php 
 $image = '';
 if( get_field('cover') ):
