@@ -2,7 +2,7 @@
     <div class="block">
         
         <div class="pure-g">
-            <div class="pure-u-1-3">
+            <div class="pure-u-1-2">
             
        <div class="footer-info">  
         
@@ -21,12 +21,16 @@
     <li>+7 495 946-18-06</li>
     <li><a href="mailto:iam@iam.ras.ru">iam@iam.ras.ru</a></li>
 </ul>
-</div> 
+</div>
+ 
+<div class="copyright">
+1985<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> 
+</div>   
   
    </div>              
             </div>
             
-            <div class="pure-u-2-3">
+            <div class="pure-u-1-2">
             
  <div class="pure-g">
             
@@ -69,39 +73,31 @@
             </div> 
                
 </div>                                    
-                
-            </div>
-            
-
-            
-            
-        </div>
-        
-        
-        <div class="footer-line">
+  
+     <div class="footer-line">
         <div class="pure-g">
-            <div class="pure-u-1-2">
-<div class="copyright">
-1985<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, <span>Институт прикладной механики Российской академии наук</span> 
-</div>
-           </div>
-           
-            <div class="pure-u-1-3">
+          <div class="pure-u-4-5 center">
+
 По вопросам работы сайта можно писать на <a href="mailto:info@iam.ras.ru">info@iam.ras.ru</a>                 
             </div>
             
-            <div class="pure-u-1-6 right">
+            <div class="pure-u-1-5 right">
                  <div class="design_logo">
                      <a href="http://nikolaysemenov.ru">Разработка</a>
                  </div> 
  
             </div>
         </div>
+     </div>                             
+            </div>
+            
 
+            
+            
+        </div>
+        
         
 
-       
-        </div>
         
     </div>
 </div>
