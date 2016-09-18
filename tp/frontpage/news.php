@@ -1,10 +1,19 @@
 <div class="iam_live">
+
+<div class="mkmk_advert">
+<a href="/mkmk2016/"></a>
+    Конференция <span>МКМК&middot;2016</span>
+
+</div> 
+     
     <div class="gallery-flickr news-flickr flickr clearfix" data-id="141750763@N05" data-count="25" data-size="sq">
     </div>
 <div class="block">
     <a href="https://www.flickr.com/photos/iam_ras/" class="flick_link"><span>&middot;</span> Live</a>
 </div>
+
 </div>
+
 
 
 <div class="overnews" id="news">

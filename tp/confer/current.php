@@ -52,15 +52,16 @@
 			<div class="pure-u-1">
                 <div class="how-pay">
                 <h2>Оплата</h2>
-					организационного взноса 
+					Организационный взнос можно оплатить через персональную страницу, ссылка на которую придет в письме сразу после регистрации.
 				</div>			    
 			</div>
 			
 <div class="pure-u-1">
 
 	<div class="paydecript">
+	
+Организационный взнос составляет 2500&nbsp;₽ при оплате до 21 октября 2016 г. и 3000&nbsp;₽ после 21 октября 2016 г. Для аспирантов 1200&nbsp;₽ до 21 октября 2016 г. и 1500&nbsp;₽ после 21 октября 2016 г. Студенты освобождаются от организационного взноса.
 
-Организационный взнос составляет 1500&nbsp;₽, за заочное участие — 1300&nbsp;₽. Студенты и аспиранты от оплаты освобождаются.
 	
 	</div>
 
@@ -73,8 +74,8 @@
 <img src="<?php bloginfo("template_url"); ?>/img/banking.svg"><br><strong>Банковским переводом</strong>
 </div>
 
-Воспользуйтесь <a href="#line1" class="popup-with-move-anim ">реквизитами</a> и <a href="https://www.dropbox.com/s/lquwfbaqg8j2ves/poruchenie.doc?dl=0" target="_blank">образцом оформления платежного поручения</a> и <a href="https://www.dropbox.com/s/cen74pw7ob3ufsj/kvitancia.xls?dl=0">образцом квитанции</a>. 
-После оплаты нужно будет прислать копию подтверждающего документа по e-mail: <a href="mailto:conference@iam.ras.ru">conference@iam.ras.ru</a> с обязательной пометкой «оргвзнос».
+Воспользуйтесь <a href="#line1" class="popup-with-move-anim ">реквизитами</a> и <a href="https://www.dropbox.com/s/lquwfbaqg8j2ves/poruchenie.doc?dl=1" target="_blank">образцом оформления платежного поручения</a> и <a href="https://www.dropbox.com/s/cen74pw7ob3ufsj/kvitancia.xls?dl=1">образцом квитанции</a>. 
+После оплаты нужно будет прикрепить скан квитанции на персональной странице.
 
  	</div>	
 
@@ -104,36 +105,6 @@
 </div>	
 Через систему <a href="https://money.yandex.ru/" class="">Яндекс.деньги</a> оплатить можно как со своего Яндекс.кошелька, так и с банковской карты.
 	</div>	
-	
-<div class="zoom-anim-dialog white-popup mfp-hide" id="yamoney">
-<div class="pure-g">
-<div class="pure-u-2-3">
-    <h2 >Яндекс.деньги</h2>
-
-
-<?php include(TEMPLATEPATH . '/tp/confer/form.php'); ?>	
-</div>
-<div class="pure-u-1-3">
-    <div class="pure-g">
-    <div class="pure-u-1" >
-    <h2>Условия</h2>
-    <h3>Комиссия</h3>
-    При оплате комиссия не взимается, оплатить можно как банковской картой, так и с Яндекс кошелька.
-    </div>
-
-    <div class="pure-u-1" >
-    <h3>Сроки</h3>
-    Деньги будут получены максимум на следующий рабочий день после платежа.
-    </div>
-
-    <div class="pure-u-1" >
-    <h3>Отчетность</h3>
-    Отчетные документы и договор можно будет получить, во время конференции.
-    </div>
-    </div> 
-</div>
-</div>
-</div>	
 	    
 </div>
 				</div>
@@ -148,7 +119,7 @@
 
 	<div class="pure-u-1-3">
 <span class="supp-t">Вопросы оплаты:</span>
-<?php echo emp_insert('1029'); ?>		
+<?php echo emp_insert('143'); ?>		
 	</div>
 	
 	<div class="pure-u-1-3">

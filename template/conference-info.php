@@ -57,7 +57,7 @@ get_header(); ?>
 			</div>	
 					
 			<div class="rek">
-<a href="https://www.dropbox.com/s/19rrq3bxun24xjc/info2015.doc?dl=0">Скачать информационное сообщение</a>
+<a href="https://www.dropbox.com/s/qrvlht4jkq2537y/Pervoe_Inf_Pism.pdf?dl=1">Скачать информационное сообщение</a>
 			</div>			
 			<div class="rek">
 <div class="likely likely-small" data-single-title="Поделиться">

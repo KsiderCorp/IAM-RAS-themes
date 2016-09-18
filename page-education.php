@@ -140,7 +140,7 @@ $image = wp_get_attachment_image_src( $attachment_id, $size );?>
      <div class="edu-postdoc_boss">
         
 <?php $args = array( 
-'post_type'=>'employees','include' => 28);
+'post_type'=>'employees','include' => 572);
 $postdoc = get_posts( $args );  
 foreach ($postdoc as $post) :  setup_postdata($post);?>
        

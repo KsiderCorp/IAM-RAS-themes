@@ -17,6 +17,8 @@ Author: ksider
 
 @import 'lib/nav.less';
 
+@import 'lib/footer.less';
+
 
 
 .block {
@@ -242,17 +244,18 @@ a.h4link {
         
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom center;
 
-background-image: url(img/bc/frontpage.svg); 
-       a{color: #fff; }
+        
+        
+       a{color: #fff;}
         
         .version {
            position: absolute;
             bottom: 1em;right: 1em;
             a {
-            font-size: 2em;
-            color: #2980b9;
+            font-size: 1em;
+            color: #fff;
             text-decoration: none;
             }
         .max(760px, {display: none;});    
@@ -307,8 +310,8 @@ background-image: url(img/bc/frontpage.svg);
                             color: #000;
                             padding: 1em;
                             &:hover {
-                               background-color: #e95b4d;
-                                color: #fff;
+                               background-color: #e74c3c;
+                               color: #fff;
                                }
                         }
                     }
@@ -344,23 +347,22 @@ background-image: url(img/bc/frontpage.svg);
                display: block;
                color: #fff;
                font-size: 1.2em;
+               font-weight: bold;
                padding: 1em;
                text-decoration: none;
-               background-color:#2980b9;
+      
                 &:hover {
-                   background-color: #e95b4d;
+                   background-color: #fff;
+                    color: #3498db;
                    }
            }
            .front_boss-name {
                font-size: 0.8em;
                padding-left: 1rem;
            }
-         
+         }
        }
-
-        }
-
-}
+    }
 
 .scrolldown {
   text-align: center;
@@ -424,28 +426,13 @@ background-image: url(img/bc/frontpage.svg);
     
         .upper(1em);
         display: block;
-        border: 3px solid #fff;
         padding: 2em;
 
         color: #313131;
 
-          
-        &:before {
-        .round(2px, #313131);
-        content: ' ';
-        position: absolute;
-        top: 0.5em;right: .5em;  
-        }       
-        &:after {
-            content: ' ';
-            position: absolute;
-            top: 0.5em;left: 0.5em;
-        .round(2px, #313131);
-        }
         
         &:hover {
         color: #c0392b;    
-        border-color: #c0392b; 
         }
 
 }
@@ -932,88 +919,8 @@ a.peepcontl {
     padding: 1em 0}
         
 
-/* footer */
-.editfootblock {
-  margin-top: 0;
-  font-size: 14px;
-  background: #212121;
-  color: #bdc3c7;
-  padding: 4em 0;
-  position:relative;
-    z-index: 99;
-}
 
-.footadress {
-  padding-top: 1em;
-}
 
-.copyright {
-  margin-left: 1em;
-  position: relative;
-}
-
-.copyright:before {
-  display: block;
-  position: absolute;
-  left: -1em;
-  content: '\00a9';
-}
-
-.editfootblock ul {
-  margin: 0;
-  padding: 1em 0 0;
-  list-style-type: none;
-}
-
-.editfootblock ul.logoul {
-  padding: 0;
-}
-
-.editfootblock ul li {
-  line-height: 150%;
-}
-
-.editfootblock ul li a {
-  color: #7f8c8d;
-  text-decoration: none;
-}
-
-.editfootblock ul li a:hover {
-  color: #e74c3c;
-}
-
-a.footlogo {
-  color: #000;
-  display: block;
-  border-left: 4px solid #2980b9;
-  padding: 1em;
-  margin: 0;
-}
-
-.webmaster, 
-.izdal {
-  padding: 0 1em;
-}
-
-.izdal.social {
-  padding: 0;
-}
-
-.izdal.social ul {
-  text-align: right;
-}
-
-.design {
-  margin: 0 auto;
-}
-.webinfo {
-	display:inline-block;
-	width:auto;
-	margin:0 auto;
-	color:#7f8c8d;
-	padding:2em 0 0;
-	margin-top:4em;}
-.webinfo a{color:#7f8c8d;}
 
 /* Single laboratory */
 .singttl {
@@ -1322,9 +1229,9 @@ box-shadow: 4px 4px 10px 0 rgba(0,0,0,.2);/**/
 	padding: 2em;
 	margin: 1em 0;
 }
-.conf-info-block ol{
+/*.conf-info-block ol{
 	padding: 1em 0;
-}
+}*/
 
 .conf-info-content {
 }

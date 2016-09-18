@@ -288,11 +288,10 @@ a.allnews {
 }
 
 .iam_live {
+    
+    position: relative;
     background-color: #373737;
-    
-    
-    
-    
+        
     a.flick_link {
         display: inline-block;
         margin-left: 2em;
@@ -306,7 +305,6 @@ a.allnews {
             color: #f00;
           }
     }
-    
     
     .news-flickr {
      
@@ -363,6 +361,45 @@ a.allnews {
         
     }
  
+    .mkmk_advert {
+        
+        display: block;
+        position: absolute;
+        top: 0;bottom: 1em;left: 0;right: 0;
+        
+        z-index: 5;
+        background-color: #e74c3c;
+        opacity: 1;
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        
+        -ms-align-items: center;
+        align-items: center;
+        
+        font-size: 1.2em; color: #fff;
+        
+        span {
+            margin-left: 1em;
+               text-transform: uppercase;
+               font-size: 1em;
+               letter-spacing: .2em; 
+        }
+        
+        a {
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0; 
+        }
+    }
 }
 
    
